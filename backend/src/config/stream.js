@@ -8,28 +8,28 @@ const streamClient = StreamChat.getInstance(
 export const upsertStreamUsers = async (userData) => {
   try {
     await streamClient.upsertUser(userData);
-    console.log("Stream user upserted Successfully", userData.name);
+    console.log("Stream user upserted successfully:", userData.name);
     return userData;
   } catch (error) {
-    console.log("Error upserting user data :", error);
+    console.log("Error upserting Stream user:", error);
   }
 };
 
 export const deleteStreamUsers = async (userId) => {
   try {
     await streamClient.deleteUser(userId);
-    console.log("Stream user deleted Successfully");
+    console.log("Stream user deleted successfully:", userId);
   } catch (error) {
-    console.log("Error deleting user data :", error);
+    console.error("Error deleting Stream user:", error);
   }
 };
 
-export const generateStreamToken = async (userId) => {
+export const generateStreamToken = (userId) => {
   try {
     const userIdString = userId.toString();
     return streamClient.createToken(userIdString);
   } catch (error) {
-    console.log("Error creating the token", error);
+    console.log("Error generating Stream token:", error);
     return null;
   }
 };
