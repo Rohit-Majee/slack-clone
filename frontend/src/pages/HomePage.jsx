@@ -14,6 +14,10 @@ import {
 } from "stream-chat-react";
 import { UserButton } from "@clerk/clerk-react";
 import { HashIcon, PlusIcon, UsersIcon } from "lucide-react";
+import CreateChannelModal from "../components/CreateChannelModal";
+import CustomChannelHeader from "../components/CustomChannelHeader";
+import CustomChannelPreview from "../components/CustomChannelPreview";
+import UsersList from "../components/UsersList";
 
 const HomePage = () => {
   const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);

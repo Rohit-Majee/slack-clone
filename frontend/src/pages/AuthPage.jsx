@@ -1,11 +1,6 @@
 import { SignInButton } from "@clerk/clerk-react";
 import "../styles/auth.css";
-import {
-  LockKeyhole,
-  MessageCircleMore,
-  MoveRight,
-  UsersRound,
-} from "lucide-react";
+import { LockKeyhole, MessageCircleMore, UsersRound } from "lucide-react";
 function AuthPage() {
   return (
     <div className="auth-container">
