@@ -34,7 +34,7 @@ function InviteModal({ channel, onClose }) {
       try {
         const members = Object.keys(channel.state.members);
         const res = await client.queryUsers(
-          { id: { $nin: members } },
+          { id: { $nin: members }, role: { $ne: "admin" } },
           { name: 1 },
           { limit: 30 }
         );

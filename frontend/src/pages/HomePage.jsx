@@ -101,7 +101,7 @@ const HomePage = () => {
                         </div>
                       </div>
 
-                      {/* todos: add better components here instead of just a simple text  */}
+                     
                       {loading && (
                         <div className="loading-message">
                           Loading channels...

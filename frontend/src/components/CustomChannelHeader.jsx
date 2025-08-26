@@ -1,5 +1,3 @@
-import { useUser } from "@clerk/clerk-react";
-import { useState } from "react";
 import {
   HashIcon,
   LockIcon,
@@ -8,11 +6,13 @@ import {
   VideoIcon,
 } from "lucide-react";
 import { useChannelStateContext } from "stream-chat-react";
-import InviteModal from "./InviteModal";
-import PinnedMessagesModal from "./PinnedMessagesModal";
+import { useState } from "react";
+import { useUser } from "@clerk/clerk-react";
 import MembersModal from "./MembersModal";
+import PinnedMessagesModal from "./PinnedMessagesModal";
+import InviteModal from "./InviteModal";
 
-function CustomChannelHeader() {
+const CustomChannelHeader = () => {
   const { channel } = useChannelStateContext();
   const { user } = useUser();
 
@@ -124,6 +124,6 @@ function CustomChannelHeader() {
       )}
     </div>
   );
-}
+};
 
 export default CustomChannelHeader;
