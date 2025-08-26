@@ -37,7 +37,12 @@ const HomePage = () => {
     }
   }, [chatClient, searchParams]);
 
-  if (error) return <p>Something went wrong...</p>;
+  if (error)
+    return (
+      <div className="p-6 rounded-2xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white shadow-lg backdrop-blur-md max-w-sm text-center">
+        <p className="text-lg font-semibold">⚠️ Something went wrong...</p>
+      </div>
+    );
 
   if (isLoading || !chatClient) return <PageLoader />;
 

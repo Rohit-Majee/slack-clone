@@ -101,7 +101,10 @@ function CreateChannelModal({ isOpen, onClose }) {
       setLoadingUsers(true);
       try {
         const response = client.queryUsers(
-          { id: { $ne: client.user.id } },
+          {
+            id: { $ne: client.user.id },
+            role: { $ne: "admin" }, // exclude users with admin role
+          },
           { name: 1 },
           { limit: 100 }
         );
