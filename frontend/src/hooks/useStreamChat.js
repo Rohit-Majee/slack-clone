@@ -21,7 +21,7 @@ export const useStreamChat = () => {
     enabled: !!user?.id, // this will take the object and convert it to a boolean
   });
 
-  // init stream chat client
+  
   // init stream chat client
   useEffect(() => {
     if (!tokenData?.token || !user?.id || !STREAM_API_KEY) return;
